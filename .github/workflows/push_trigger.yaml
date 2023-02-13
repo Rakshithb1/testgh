@@ -1,18 +1,14 @@
-name: test
-
+name: release
 on:
   push:
-    branch:
-      - 'master'
-      - 'helm-*'
+    tags: '*'
 
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Publish helm chart
-        uses: ./
+      - name: Publish Helm charts
+        uses: Rakshithb1/testgh@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          charts_dir: charts
