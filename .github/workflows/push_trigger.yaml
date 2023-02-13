@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish Helm charts
-        uses: Rakshithb1/testgh@master
+        uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          app_version: 1.16.0
+          chart_version: 0.1.0
