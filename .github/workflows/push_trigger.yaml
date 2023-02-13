@@ -5,8 +5,9 @@ on:
     branches:
       - 1.2.0.*
       - develop
-      - master
       - main
+    paths:
+      - 'charts/**'
 
 jobs:
   Generate_Documentation:
@@ -104,5 +105,5 @@ jobs:
           branch: gh-pages
           default_author: github_actions
           message: 'added helm charts for release ${{ github.event.inputs.git-ref }}'
-          add: ./*.tgz ./index.yaml
+          add: './*.tgz ./index.yaml'
         if: env.SKIP != 'TRUE'
