@@ -1,13 +1,12 @@
-name: Publish mosip-helm chartsssssss
+name: Publish mosip-helm charts
 
 on:
   push:
     branches:
       - 1.2.0.*
       - develop
+      - master
       - main
-    paths:
-      - 'charts/**'
 
 jobs:
   Generate_Documentation:
