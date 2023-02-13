@@ -1,4 +1,4 @@
-name: Publish mosip-helm charts
+name: Publish mosip-helm chartsssssss
 
 on:
   push:
