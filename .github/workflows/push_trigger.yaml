@@ -11,4 +11,4 @@ jobs:
       - name: Publish Helm charts
         uses: Rakshithb1/helm-gh-pages@main
         with:
-          token: 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
+          token: ${{ secrets.SEC_GITHUB_TOKEN }}
